@@ -1,0 +1,5 @@
+model,val_mae_t_ha,val_rmse_t_ha,val_r2,val_medae_t_ha
+ridge_trend,0.4748,0.6678,0.5199,0.3358
+forest,0.5761,0.7706,0.3607,0.449
+tree,0.6886,0.8742,0.1772,0.5873
+median,0.827,1.0658,-0.223,0.6628

@@ -1,0 +1,51 @@
+{
+  "experiment": "Experiment 08 - Agricultural Predictive Analytics",
+  "student": "Lokanth S",
+  "reg_no": "23MID0037",
+  "faculty_coordinator": "Dr. Durgesh Kumar",
+  "manual_version": "3.0",
+  "d5_acquisition_audit": {
+    "candidate": "D5 (Mendeley Data DOI 10.17632/ywp3y5j9vv.1)",
+    "title": "ICRISAT District-Level Data: Heterogeneous Climate Effect on Crop Yield and Associated Risks to Water Security in India",
+    "contributor": "Souryabrata Mohapatra (published 2023-07-11)",
+    "status": "Attempted and Ingest-Audited",
+    "findings": "Metadata snapshot valid with CC BY 4.0 license; however, the deposit contains 0 attached data files in the public payload (files array is empty). Direct file API endpoints returned 404/401.",
+    "precedence_decision": "Per manual section 1 protocol, proceeded to candidate D1."
+  },
+  "d1_ingestion_record": {
+    "candidate": "D1 (Government of India Ministry of Agriculture & Farmers Welfare APY Data)",
+    "raw_file": "data/raw/crop_production.csv",
+    "sha256": "5b2637058ca4aff2ef7c0e0f2f391bca712300d082693b585f489871fd91d520",
+    "raw_byte_count": 15316741,
+    "raw_row_count": 246091,
+    "geographic_coverage": "33 States and Union Territories across India",
+    "temporal_coverage": "1997 - 2015 (19 unique harvest years)",
+    "target_crop": "Rice",
+    "rice_raw_rows": 15104,
+    "rice_valid_rows": 15082,
+    "rice_clean_rows_post_filter": 15077,
+    "target_unit": "tonnes/hectare (t/ha)",
+    "licence_status": "Government Open Data / Public Domain Academic Mirror (Attributed)"
+  },
+  "classification_extension_record": {
+    "dataset_name": "Multi-Class Crop Recommendation Benchmark",
+    "raw_file": "data/raw/crop_recommendation.csv",
+    "sha256": "808e1d84a544647f1ab2fdae04f434b1842692d6be09eee18a5c2d43eb78d77c",
+    "raw_byte_count": 147833,
+    "raw_row_count": 2200,
+    "classes_count": 22,
+    "samples_per_class": 100,
+    "features": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall"
+    ],
+    "iid_justified": true,
+    "iid_rationale": "Unlike the district-level rice yield panel data (which has explicit spatio-temporal autocorrelations and annual macro-climatic shifts requiring strict chronological partitioning), the multi-class crop recommendation task operates on localized, point-in-time soil physicochemical characteristics (N, P, K, pH) and micro-climatic readings (temperature, humidity, rainfall). Each row represents an agronomic laboratory sample / environmental profile mapped to an optimal crop label without longitudinal district time-series tracking. Consequently, random stratified splitting (60% train, 20% validation, 20% test) across the 22 balanced crop classes (100 observations per class) preserves class balance across partitions without violating temporal causality. This independence justification is logged explicitly before unblocking stratified splitting."
+  },
+  "responsible_reviewer": "Lokanth S (23MID0037)"
+}

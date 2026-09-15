@@ -1,0 +1,18 @@
+{
+  "candidate_baseline_depth12": {
+    "max_depth": 12,
+    "mae_t_ha": 0.5761,
+    "rmse_t_ha": 0.7706,
+    "r2": 0.3607,
+    "medae_t_ha": 0.449
+  },
+  "candidate_ablated_depth6": {
+    "max_depth": 6,
+    "mae_t_ha": 0.6636,
+    "rmse_t_ha": 0.8464,
+    "r2": 0.2286,
+    "medae_t_ha": 0.5534
+  },
+  "delta_mae_t_ha": 0.0875,
+  "interpretation": "Constraining maximum tree depth to 6 increases validation MAE, confirming that depth 12 captures necessary non-linear district-level interactions without severe overfitting."
+}

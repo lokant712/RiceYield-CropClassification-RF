@@ -1,0 +1,40 @@
+{
+  "suite_name": "Appendix D Synthetic Code Verification Suite",
+  "scope_notice": "Code behavior and structural assertion verification ONLY. Not agricultural findings.",
+  "tests": {
+    "test_chronological_split": {
+      "status": "PASSED",
+      "detail": "Train (2000-2011) < Val (2012-2013) < Test (2014-2015)"
+    },
+    "test_feature_whitelist_guard": {
+      "status": "PASSED",
+      "detail": "Only strictly whitelisted features ['state', 'district', 'season', 'year'] accepted by pipeline."
+    },
+    "test_encoder_leakage_assertion": {
+      "status": "PASSED",
+      "detail": "Fitted OneHotEncoder categories match training-set unique values bit-exact."
+    },
+    "test_regression_candidates": {
+      "status": "PASSED",
+      "candidates_evaluated": [
+        "median",
+        "ridge_trend",
+        "tree",
+        "forest"
+      ]
+    },
+    "test_model_reload_exactness": {
+      "status": "PASSED",
+      "detail": "Joblib serialization and deserialization yields bit-exact prediction reproduction."
+    },
+    "test_inference_guardrails": {
+      "status": "PASSED",
+      "detail": "Inference guard correctly validates bounds and rejects out-of-range inputs."
+    },
+    "test_classification_pipeline": {
+      "status": "PASSED",
+      "detail": "Classification forest pipeline fits and predicts across 11 classes."
+    }
+  },
+  "all_passed": true
+}

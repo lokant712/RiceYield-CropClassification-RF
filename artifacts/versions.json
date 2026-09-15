@@ -1,0 +1,10 @@
+{
+  "python": "3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]",
+  "scikit-learn": "1.9.0",
+  "pandas": "3.0.5",
+  "numpy": "2.5.1",
+  "joblib": "1.5.3",
+  "matplotlib": "3.11.1",
+  "seaborn": "0.13.2",
+  "reportlab": "4.5.1"
+}

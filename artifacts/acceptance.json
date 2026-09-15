@@ -1,0 +1,12 @@
+{
+  "unique_row_id": true,
+  "no_missing_targets": true,
+  "crop_is_rice": true,
+  "yield_unit_is_t_ha": true,
+  "yield_non_negative_finite": true,
+  "year_is_integer": true,
+  "no_missing_grouping": true,
+  "chronological_order": true,
+  "no_encoder_leakage": true,
+  "all_passed": true
+}

@@ -1,0 +1,90 @@
+{
+  "seed": 42,
+  "task": "regression",
+  "features": [
+    "state",
+    "district",
+    "season",
+    "year"
+  ],
+  "target": "yield_t_ha",
+  "regression_candidates": {
+    "median": {
+      "type": "DummyRegressor",
+      "strategy": "median"
+    },
+    "ridge_trend": {
+      "type": "Ridge",
+      "alpha": 1.0,
+      "solver": "lsqr"
+    },
+    "tree": {
+      "type": "DecisionTreeRegressor",
+      "max_depth": 6,
+      "min_samples_leaf": 10,
+      "random_state": 42
+    },
+    "forest": {
+      "type": "RandomForestRegressor",
+      "n_estimators": 60,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "n_jobs": 2,
+      "random_state": 42
+    }
+  },
+  "classification_candidates": {
+    "majority": {
+      "type": "DummyClassifier",
+      "strategy": "most_frequent"
+    },
+    "logistic": {
+      "type": "LogisticRegression",
+      "max_iter": 2000
+    },
+    "forest": {
+      "type": "RandomForestClassifier",
+      "n_estimators": 60,
+      "min_samples_leaf": 2,
+      "n_jobs": 2,
+      "random_state": 42
+    }
+  },
+  "split_rules": {
+    "regression": {
+      "strategy": "chronological",
+      "test_years": [
+        2014,
+        2015
+      ],
+      "validation_years": [
+        2012,
+        2013
+      ],
+      "train_years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ]
+    },
+    "classification": {
+      "strategy": "stratified_iid",
+      "train_ratio": 0.6,
+      "val_ratio": 0.2,
+      "test_ratio": 0.2,
+      "random_state": 42
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "selected_model": "ridge_trend",
+  "val_mae_t_ha": 0.4748,
+  "val_rmse_t_ha": 0.6678,
+  "val_r2": 0.5199,
+  "data_sha256": "5b2637058ca4aff2ef7c0e0f2f391bca712300d082693b585f489871fd91d520",
+  "config_sha256": "25a8dda5959c9ec74ab4a92cbac25d45e9f4f9fe098d60884e60a918bd9055ab",
+  "features": [
+    "state",
+    "district",
+    "season",
+    "year"
+  ],
+  "target": "yield_t_ha",
+  "task": "regression",
+  "rankings": [
+    {
+      "model": "median",
+      "val_mae_t_ha": 0.827,
+      "val_rmse_t_ha": 1.0658,
+      "val_r2": -0.223,
+      "val_medae_t_ha": 0.6628
+    },
+    {
+      "model": "ridge_trend",
+      "val_mae_t_ha": 0.4748,
+      "val_rmse_t_ha": 0.6678,
+      "val_r2": 0.5199,
+      "val_medae_t_ha": 0.3358
+    },
+    {
+      "model": "tree",
+      "val_mae_t_ha": 0.6886,
+      "val_rmse_t_ha": 0.8742,
+      "val_r2": 0.1772,
+      "val_medae_t_ha": 0.5873
+    },
+    {
+      "model": "forest",
+      "val_mae_t_ha": 0.5761,
+      "val_rmse_t_ha": 0.7706,
+      "val_r2": 0.3607,
+      "val_medae_t_ha": 0.449
+    }
+  ]
+}

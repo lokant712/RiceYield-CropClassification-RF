@@ -1,0 +1,30 @@
+{
+  "reviewed": true,
+  "dataset_name": "Government of India District-Season Crop Production Statistics (APY)",
+  "raw_filename": "crop_production.csv",
+  "target_crop": "Rice",
+  "column_mapping": {
+    "State_Name": "state",
+    "District_Name": "district",
+    "Crop_Year": "year",
+    "Season": "season",
+    "Crop": "crop",
+    "Area": "area_ha",
+    "Production": "production_t"
+  },
+  "unit_rules": {
+    "area": "hectares (ha)",
+    "production": "metric tonnes (t)",
+    "yield_calculation": "production_t / area_ha",
+    "target_unit": "t/ha"
+  },
+  "cleaning_rules": {
+    "drop_missing_production": true,
+    "drop_non_positive_area": true,
+    "filter_crop_equal": "Rice",
+    "filter_yield_bounds": [
+      0.0,
+      15.0
+    ]
+  }
+}
