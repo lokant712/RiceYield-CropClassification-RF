@@ -16,6 +16,7 @@ def check_cross_artifacts():
     required_root_files = [
         "23MID0037_Lab08.ipynb",
         "23MID0037_Lab08_Validation_Results.csv",
+        "23MID0037_Lab08_Classification_Validation_Results.csv",
         "23MID0037_Lab08_Test_Results.csv",
         "23MID0037_Lab08_Error_Analysis.csv",
         "23MID0037_Lab08_README.md",

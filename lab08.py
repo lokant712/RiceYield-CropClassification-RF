@@ -306,6 +306,8 @@ def run_classification_extension(cls_data_path="data/raw/crop_recommendation.csv
         })
 
     val_df = pd.DataFrame(val_results).sort_values(by='val_macro_f1', ascending=False, kind='stable').reset_index(drop=True)
+    val_df.to_csv("23MID0037_Lab08_Classification_Validation_Results.csv", index=False)
+    val_df.to_csv(os.path.join("artifacts", "classification_validation_results.csv"), index=False)
     winner_cand = val_df.iloc[0]['model']
     winner_pipe = fitted_models[winner_cand]
 

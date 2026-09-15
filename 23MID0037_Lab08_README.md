@@ -65,9 +65,17 @@ Scored under exclusive `artifacts/TEST_LOCK` creation:
 | **2014** | 767 | 0.4415 | 0.5960 | 0.4774 | 0.3341 |
 | **2015** | 79 | 0.5290 | 0.6771 | 0.4409 | 0.4514 |
 
-### 3.4 Extension 1: Multi-Class Crop Recommendation
-- **Winner:** `RandomForestClassifier`
-- **Locked Test Metrics:** Accuracy = **0.9977**, Macro-F1 = **0.9977**, Precision = **0.9978**, Recall = **0.9977** (22 classes).
+### 3.4 Extension 1: Multi-Class Crop Recommendation (Full 3-Candidate Validation)
+Evaluated across all 3 candidates on the identical 60/20/20 stratified split (`iid_justified=True`):
+
+| Candidate Model | Validation Accuracy | Validation Macro-F1 | Validation Precision | Validation Recall | Selection Outcome |
+|---|---|---|---|---|---|
+| **`forest` (RF)** | **0.9886** | **0.9886** | **0.9887** | **0.9886** | **Selected Winner** |
+| `logistic` (LR) | 0.9727 | 0.9728 | 0.9737 | 0.9727 | Rank 2 |
+| `majority` (Dummy) | 0.0455 | 0.0040 | 0.0021 | 0.0455 | Predeclared Baseline |
+
+- **Locked Test Metrics for Winner (`forest`):** Accuracy = **0.9977**, Macro-F1 = **0.9977**, Precision = **0.9978**, Recall = **0.9977** across 22 classes.
+- Exported table: `23MID0037_Lab08_Classification_Validation_Results.csv`
 
 ### 3.5 Extension 2: Depth Ablation
 - Baseline Forest (`max_depth=12`): Validation MAE = **0.5761 t/ha**
