@@ -31,6 +31,7 @@ In strict accordance with the manual's data acquisition hierarchy:
    - **Target Unit Verification:** Area in hectares (`ha`), Production in tonnes (`t`), Derived Yield = `Production / Area` in tonnes/hectare (`t/ha`).
 
 ### 2.2 Classification Extension Dataset (Crop-Label Classification)
+- **Source URL:** `https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset` (Open Agro-Ecological Benchmark by Atharva Ingle)
 - **File:** `data/raw/crop_recommendation.csv` (147,833 bytes, SHA-256: `808e1d84a544647f1ab2fdae04f434b1842692d6be09eee18a5c2d43eb78d77c`)
 - **Structure:** 2,200 observations, 22 balanced crop classes (100 samples/class), 7 soil/climate features (`N, P, K, temperature, humidity, ph, rainfall`).
 - **Documented i.i.d. Rationale (`iid_justified=True`):** Unlike the longitudinal district rice yield panel data requiring chronological partitioning, the crop-label classification task evaluates point-in-time soil physicochemical parameters (N, P, K, pH) and micro-climate readings. Each record is an independent agronomic laboratory/environmental profile without serial temporal autoregression. Therefore, random stratified 60/20/20 partitioning is justified and maintains class balance across partitions.
@@ -69,8 +70,8 @@ Scored under exclusive `artifacts/TEST_LOCK` creation:
 
 | Test Year | Sample Count (N) | MAE (t/ha) | RMSE (t/ha) | R² | MedAE (t/ha) | Stability Interpretation |
 |---|---|---|---|---|---|---|
-| **2014** | 767 (90.66%) | 0.4415 | 0.5960 | 0.4774 | 0.3341 | Dominates pooled test set; stable national coverage across states. |
-| **2015** | 79 (9.34%) | 0.5290 | 0.6771 | 0.4409 | 0.4514 | Slightly elevated MAE driven by administrative reporting lag and eastern monsoon deficits. |
+| **2014** | 767 (90.66%) | 0.4415 | 0.5960 | 0.4774 | 0.3341 | The pooled test MAE is strongly weighted toward 2014 because 2014 contains 90.66% of test observations (767 vs 79); stable national coverage across states. |
+| **2015** | 79 (9.34%) | 0.5290 | 0.6771 | 0.4409 | 0.4514 | Slightly elevated MAE; possible contributing factors include administrative reporting lag and eastern monsoon deficits, but these causes are not established by the available predictors (lower empirical support, N=79). |
 
 ### 3.4 Extension 1: Multi-Class Crop-Label Classification (Full 3-Candidate Validation)
 Evaluated across all 3 candidates on the identical 60/20/20 stratified split (`iid_justified=True`):
