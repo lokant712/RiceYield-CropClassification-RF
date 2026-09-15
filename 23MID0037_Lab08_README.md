@@ -95,15 +95,14 @@ Audited from the top 5 largest absolute errors on the locked test set:
 ```
 adv_pred_da8/
 ├── 23MID0037_Lab08.ipynb                 # Fully executed Jupyter Notebook
-├── 23MID0037_Lab08_Report.pdf            # 4-page publication-quality ReportLab PDF
 ├── 23MID0037_Lab08_Validation_Results.csv # Validation performance comparison table
 ├── 23MID0037_Lab08_Test_Results.csv       # Locked test evaluation table
 ├── 23MID0037_Lab08_Error_Analysis.csv     # 5-case test error audit table
-├── 23MID0037_Lab08_README.md             # This comprehensive README
-├── lab08.py                              # Core reference implementation (Appendix A)
-├── check_code.py                         # Synthetic fixture verification suite (Appendix D)
-├── generate_figures.py                   # 300 DPI publication figure generator
-├── generate_report.py                    # ReportLab PDF compiler
+├── 23MID0037_Lab08_README.md             # Project documentation & methodology
+├── lab08.py                              # Core reference implementation
+├── check_code.py                         # Synthetic fixture verification suite
+├── generate_figures.py                   # EDA and diagnostic figure plots generator
+├── verify_submission.py                  # Consistency check script
 ├── data/
 │   └── raw/
 │       ├── crop_production.csv           # Authentic GoI APY dataset (SHA-256: 5b263705...)
@@ -121,6 +120,7 @@ adv_pred_da8/
 │   ├── test_predictions.csv              # Locked test row predictions & residuals
 │   ├── per_class.json                    # Classification extension metrics
 │   ├── code_verification.json            # Synthetic check suite results
+│   ├── d5_probe_log.json                 # Raw network probe trace for candidate D5
 │   └── TEST_LOCK                         # Exclusive one-time test lockfile
 ├── artifacts_ablation/
 │   └── ablation_comparison.json          # Isolated Extension 2 depth ablation results
@@ -142,10 +142,10 @@ adv_pred_da8/
 
 ## 6. Execution & Verification Instructions
 
-To reproduce all results, verify assertions, and regenerate deliverables:
+To reproduce all results, verify assertions, and run the complete pipeline:
 
 ```bash
-# 1. Run synthetic code verification suite (Appendix D)
+# 1. Run synthetic code verification suite
 python check_code.py
 
 # 2. Run core data pipeline and model validation
@@ -154,6 +154,6 @@ python lab08.py --mode all
 # 3. Generate high-resolution figures
 python generate_figures.py
 
-# 4. Compile publication-quality PDF report
-python generate_report.py
+# 4. Verify all cross-artifact consistency checks
+python verify_submission.py
 ```

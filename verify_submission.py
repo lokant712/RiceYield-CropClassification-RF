@@ -12,16 +12,16 @@ import pypdf
 def check_cross_artifacts():
     print("=== Cross-Artifact Consistency Verification ===")
     
-    # 1. Check required root files
+    # 1. Check required student deliverables
     required_root_files = [
         "23MID0037_Lab08.ipynb",
-        "23MID0037_Lab08_Report.pdf",
         "23MID0037_Lab08_Validation_Results.csv",
         "23MID0037_Lab08_Test_Results.csv",
         "23MID0037_Lab08_Error_Analysis.csv",
         "23MID0037_Lab08_README.md",
         "lab08.py",
-        "check_code.py"
+        "check_code.py",
+        "generate_figures.py"
     ]
     for rf in required_root_files:
         assert os.path.exists(rf), f"Missing root file: {rf}"
@@ -103,18 +103,7 @@ def check_cross_artifacts():
     assert cv['all_passed'] is True
     print(f"[OK] Synthetic code verification suite all passed: {cv['all_passed']}")
 
-    # 9. Check PDF Report page count and content
-    reader = pypdf.PdfReader("23MID0037_Lab08_Report.pdf")
-    page_count = len(reader.pages)
-    assert 4 <= page_count <= 6, f"PDF page count {page_count} not in 4-6 range!"
-    pdf_text = "".join([p.extract_text() for p in reader.pages])
-    assert "23MID0037" in pdf_text
-    assert "ridge_trend" in pdf_text
-    assert "0.4748" in pdf_text or "0.475" in pdf_text
-    assert "0.4497" in pdf_text or "0.450" in pdf_text
-    print(f"[OK] PDF Report page count: {page_count} pages (within ~4-6 page specification)")
-
-    # 10. Check notebook execution state
+    # 9. Check notebook execution state
     with open("23MID0037_Lab08.ipynb", "r", encoding="utf-8") as f:
         nb = json.load(f)
     code_cells = [c for c in nb['cells'] if c['cell_type'] == 'code']
