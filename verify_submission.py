@@ -19,6 +19,8 @@ def check_cross_artifacts():
         "23MID0037_Lab08_Classification_Validation_Results.csv",
         "23MID0037_Lab08_Test_Results.csv",
         "23MID0037_Lab08_Error_Analysis.csv",
+        "23MID0037_Lab08_Report.pdf",
+        "23MID0037_Lab08_Report.docx",
         "23MID0037_Lab08_README.md",
         "lab08.py",
         "check_code.py",
@@ -27,6 +29,12 @@ def check_cross_artifacts():
     for rf in required_root_files:
         assert os.path.exists(rf), f"Missing root file: {rf}"
         print(f"[OK] Root file exists: {rf}")
+
+    # Check report page count (target: ~4-6 pages)
+    pdf_reader = pypdf.PdfReader("23MID0037_Lab08_Report.pdf")
+    num_pages = len(pdf_reader.pages)
+    assert 4 <= num_pages <= 7, f"Report page count out of bounds (~4-6 pages expected, found {num_pages})"
+    print(f"[OK] Report PDF verified: {num_pages} pages (target ~4-6 pages)")
 
     # 2. Check required folders
     for d in ["models", "figures", "artifacts", "artifacts_ablation", "data/raw"]:

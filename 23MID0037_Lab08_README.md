@@ -102,15 +102,18 @@ Audited from the top 5 largest absolute errors on the locked test set:
 
 ```
 adv_pred_da8/
-├── 23MID0037_Lab08.ipynb                 # Fully executed Jupyter Notebook
-├── 23MID0037_Lab08_Validation_Results.csv # Validation performance comparison table
-├── 23MID0037_Lab08_Test_Results.csv       # Locked test evaluation table
-├── 23MID0037_Lab08_Error_Analysis.csv     # 5-case test error audit table
-├── 23MID0037_Lab08_README.md             # Project documentation & methodology
-├── lab08.py                              # Core reference implementation
-├── check_code.py                         # Synthetic fixture verification suite
-├── generate_figures.py                   # EDA and diagnostic figure plots generator
-├── verify_submission.py                  # Consistency check script
+├── 23MID0037_Lab08.ipynb                                 # Fully executed Jupyter Notebook
+├── 23MID0037_Lab08_Validation_Results.csv                # Regression validation comparison table
+├── 23MID0037_Lab08_Classification_Validation_Results.csv # 3-candidate classification validation table
+├── 23MID0037_Lab08_Test_Results.csv                      # Locked test evaluation table
+├── 23MID0037_Lab08_Error_Analysis.csv                    # 5-case test error audit table
+├── 23MID0037_Lab08_Report.pdf                            # 6-page research report (PDF)
+├── 23MID0037_Lab08_Report.docx                           # Research report (DOCX)
+├── 23MID0037_Lab08_README.md                             # Project documentation & methodology
+├── lab08.py                                              # Core reference implementation
+├── check_code.py                                         # Synthetic fixture verification suite
+├── generate_figures.py                                   # EDA and diagnostic figure plots generator
+├── verify_submission.py                                  # Consistency check script
 ├── data/
 │   └── raw/
 │       ├── crop_production.csv           # Authentic GoI APY dataset (SHA-256: 5b263705...)

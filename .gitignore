@@ -1,9 +1,8 @@
 __pycache__/
 *.pyc
 scratch/
-*.pdf
-*.docx
 generate_report.py
 build_notebook.py
 record_d5_probe.py
 build_20page_reports.py
+build_report.py
