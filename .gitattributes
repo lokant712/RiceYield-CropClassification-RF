@@ -1,0 +1,6 @@
+# Treat all raw datasets as binary to prevent CRLF / LF line ending normalization
+data/raw/* binary
+data/raw/*.csv -text
+*.joblib binary
+*.pdf binary
+*.png binary

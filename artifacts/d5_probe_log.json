@@ -1,0 +1,36 @@
+{
+  "target_candidate": "D5 (Mendeley Data DOI: 10.17632/ywp3y5j9vv.1)",
+  "dataset_title": "ICRISAT District-Level Data: Heterogeneous Climate Effect on Crop Yield and Associated Risks to Water Security in India",
+  "contributor": "Souryabrata Mohapatra",
+  "publish_date": "2023-07-11T16:27:06.004Z",
+  "probes": [
+    {
+      "description": "Mendeley Public DOI Webpage",
+      "url": "https://data.mendeley.com/datasets/ywp3y5j9vv/1",
+      "http_status": 200,
+      "response_summary": "HTML Webpage loaded (116287 bytes); files payload empty.",
+      "error": null
+    },
+    {
+      "description": "Mendeley Public API v1 Dataset Endpoint",
+      "url": "https://data.mendeley.com/public-api/datasets/ywp3y5j9vv/1",
+      "http_status": 404,
+      "response_summary": null,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "description": "Mendeley Public API v1 Files Endpoint",
+      "url": "https://data.mendeley.com/public-api/datasets/ywp3y5j9vv/1/files",
+      "http_status": 404,
+      "response_summary": null,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "description": "Legacy Mendeley General API",
+      "url": "https://api.mendeley.com/datasets/ywp3y5j9vv/1",
+      "http_status": 401,
+      "response_summary": null,
+      "error": "HTTP Error 401: Unauthorized"
+    }
+  ]
+}

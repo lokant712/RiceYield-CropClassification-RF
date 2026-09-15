@@ -82,11 +82,11 @@ Audited from the top 5 largest absolute errors on the locked test set:
 
 | Rank | District (State, Season, Year) | Actual | Predicted | Abs Error | Agronomic Hypothesis & Agricultural Consequence | Proposed Mitigation |
 |---|---|---|---|---|---|---|
-| **#1** | BIJAPUR (Karnataka, Kharif 2014) | 0.05 t/ha | 2.50 t/ha | **2.45 t/ha** | **Hypothesis:** Severe sub-seasonal drought shock.<br/>**Consequence:** Deficit in local emergency grain reserve planning. | Integrate satellite NDVI and rainfall anomaly telemetry. |
-| **#2** | CHIKMAGALUR (Karnataka, Kharif 2014) | 0.27 t/ha | 2.45 t/ha | **2.18 t/ha** | **Hypothesis:** Localized blast disease/lodging.<br/>**Consequence:** Procurement logistics misallocation. | Ingest pest surveillance telemetry into pre-harvest adjustments. |
-| **#3** | MANDYA (Karnataka, Kharif 2014) | 0.66 t/ha | 2.82 t/ha | **2.16 t/ha** | **Hypothesis:** Lowland irrigation canal supply failure.<br/>**Consequence:** Farmer credit default risks unhedged. | Ingest canal reservoir level telemetry at block resolution. |
-| **#4** | SHIMOGA (Karnataka, Summer 2014) | 0.54 t/ha | 2.46 t/ha | **1.92 t/ha** | **Hypothesis:** High temperature spike during grain filling.<br/>**Consequence:** Ineffective market procurement timing. | Fuse thermal infrared MODIS canopy temperature anomalies. |
-| **#5** | MYSORE (Karnataka, Kharif 2014) | 0.77 t/ha | 2.65 t/ha | **1.88 t/ha** | **Hypothesis:** Unfavorable rainfall distribution during flowering.<br/>**Consequence:** Regional buffer storage misallocation. | Refine spatial boundary to mandal / taluk resolution. |
+| **#1** | ARWAL (Bihar, Winter 2014) | 4.40 t/ha | 1.70 t/ha | **2.70 t/ha** | **Hypothesis:** High-performing winter irrigation pocket outperforming regional historical mean.<br/>**Consequence:** Deficit in local procurement allocation and storage capacity. | Ingest canal/groundwater irrigation percentage and seasonal precipitation anomalies. |
+| **#2** | ROHTAS (Bihar, Winter 2014) | 4.18 t/ha | 2.01 t/ha | **2.17 t/ha** | **Hypothesis:** Intensive adoption of High-Yielding Varieties (HYV) with intensive fertilizer application.<br/>**Consequence:** Underestimation of regional surplus leading to grain storage bottlenecks. | Ingest micro-irrigation percentage and seed replacement rate at block level. |
+| **#3** | DEOGARH (Odisha, Winter 2014) | 3.48 t/ha | 1.34 t/ha | **2.14 t/ha** | **Hypothesis:** Favorable micro-climate in irrigated valley tract uncaptured by static district identifier.<br/>**Consequence:** Misallocated transport logistics and procurement timing. | Incorporate remote-sensing vegetation indices (NDVI/EVI) and agrometeorological telemetry. |
+| **#4** | SHEIKHPURA (Bihar, Winter 2014) | 3.81 t/ha | 1.71 t/ha | **2.10 t/ha** | **Hypothesis:** Bumper harvest due to well-timed late-monsoon recharge in alluvial belt.<br/>**Consequence:** Failure to arrange sufficient mandi procurement infrastructure. | Fuse satellite soil moisture and active reservoir capacity indices. |
+| **#5** | LAKHISARAI (Bihar, Winter 2014) | 3.69 t/ha | 1.69 t/ha | **1.99 t/ha** | **Hypothesis:** High agro-ecological variance across riverine tracts within district boundary.<br/>**Consequence:** Sub-optimal regional fertilizer quota planning. | Refine administrative boundaries to block / taluk granularity. |
 
 ---
 

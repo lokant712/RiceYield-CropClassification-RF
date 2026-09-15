@@ -46,6 +46,7 @@ def check_cross_artifacts():
         "artifacts/test_predictions.csv",
         "artifacts/per_class.json",
         "artifacts/code_verification.json",
+        "artifacts/d5_probe_log.json",
         "artifacts/TEST_LOCK",
         "artifacts_ablation/ablation_comparison.json",
         "models/selected_bundle.joblib",
