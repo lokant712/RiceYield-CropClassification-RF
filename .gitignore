@@ -2,6 +2,8 @@ __pycache__/
 *.pyc
 scratch/
 ~$*
+~*
+*.tmp
 generate_report.py
 build_notebook.py
 record_d5_probe.py
